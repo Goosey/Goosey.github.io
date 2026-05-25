@@ -400,7 +400,7 @@ main { position: relative; }
 }
 
 .post p, .post ul, .post ol {
-  font-size: var(--body-lg);
+  font-size: var(--body-md);
   font-weight: 500;
   line-height: 1.45;
   margin: 0 0 1em;
