@@ -365,6 +365,14 @@ main { position: relative; }
   line-height: 1.05;
 }
 
+.card__tagline {
+  font-family: var(--display);
+  font-size: 20px;
+  color: var(--green);
+  margin: -6px 0 12px;
+  line-height: 1.1;
+}
+
 .card__excerpt {
   font-size: var(--body-sm);
   font-weight: 400;
