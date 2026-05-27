@@ -492,16 +492,17 @@ main { position: relative; }
     --body-lg: 24px;
     --gutter: 32px;
   }
-
   .card-grid { grid-template-columns: repeat(2, 1fr); }
-
   .post-image--wide {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
+  .hero__right {
+    width: 100%;
+    text-align: left;
+  }
 }
-
 @media (max-width: 720px) {
   :root {
     --h1: 44px;
@@ -513,15 +514,11 @@ main { position: relative; }
     --body-sm: 15px;
     --gutter: 20px;
   }
-
   main { padding-top: 60px; padding-bottom: 60px; }
-
   .site-header__inner { padding: 14px var(--gutter); }
   .brand svg { width: 36px; height: 36px; }
   .brand__word { font-size: 18px; }
-
   .nav-toggle { display: inline-flex; }
-
   .nav {
     position: absolute;
     top: 100%;
@@ -535,19 +532,22 @@ main { position: relative; }
   }
   .nav.is-open { display: flex; }
   .nav a { padding: 10px 0; font-size: 18px; }
-
   .hero__cta { font-size: 30px; margin-top: 48px; }
-
   .about__hero-img { height: 240px; }
-
   .card-grid { grid-template-columns: 1fr; gap: 28px; }
-
   .post-image-row,
   .post-image-row--three { grid-template-columns: 1fr; gap: 14px; }
-
   .post-nav { flex-direction: column; }
   .post-nav a, .post-nav a.next { max-width: 100%; text-align: left; align-items: flex-start; }
-
   .site-footer { padding: 32px var(--gutter); }
   .socials a { width: 40px; height: 40px; }
+  .hero__greeting {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero__intro { max-width: 100%; }
+  .hero__right {
+    width: 100%;
+    text-align: left;
+  }
 }
