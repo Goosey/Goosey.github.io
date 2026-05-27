@@ -215,6 +215,7 @@ main { padding-top: 120px; padding-bottom: 120px; }
 .hero__greeting {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 28px;
   flex-wrap: wrap;
 }
@@ -225,42 +226,30 @@ main { padding-top: 120px; padding-bottom: 120px; }
   margin: 0;
 }
 
+.hero__right {
+  display: flex;
+  flex-direction: column;
+  max-width: 620px;
+  padding-bottom: 12px;
+}
+
 .hero__intro {
   color: var(--green);
   font-size: var(--body-lg);
   font-weight: 500;
   line-height: 1.4;
-  max-width: 620px;
   margin: 0;
-  padding-bottom: 12px;
 }
 
 .hero__cta {
-  margin-top: 80px;
-  display: inline-flex;
-  align-items: center;
-  gap: 18px;
+  margin-top: 28px;
   font-family: var(--display);
-  font-size: var(--h3);
+  font-size: 28px;
   color: var(--green);
 }
 
 .hero__cta:hover { color: var(--pink); }
-.hero__cta .arrow {
-  width: 56px; height: 2px; background: currentColor;
-  position: relative;
-  transition: width .25s ease;
-}
-.hero__cta .arrow::after {
-  content: "";
-  position: absolute;
-  right: 0; top: 50%;
-  width: 14px; height: 14px;
-  border-top: 2px solid currentColor;
-  border-right: 2px solid currentColor;
-  transform: translateY(-50%) rotate(45deg);
-}
-.hero__cta:hover .arrow { width: 96px; }
+
 
 /* decorative accent shapes on home */
 .accent-shapes {
