@@ -214,7 +214,7 @@ main { padding-top: 120px; padding-bottom: 120px; }
 
 .hero__greeting {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   justify-content: space-between;
   gap: 28px;
   flex-wrap: wrap;
@@ -229,8 +229,9 @@ main { padding-top: 120px; padding-bottom: 120px; }
 .hero__right {
   display: flex;
   flex-direction: column;
-  max-width: 620px;
+  width: 620px;
   padding-bottom: 12px;
+  text-align: right;
 }
 
 .hero__intro {
