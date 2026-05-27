@@ -116,6 +116,7 @@ main { padding-top: 120px; padding-bottom: 120px; }
 }
 .brand:hover { color: var(--pink); }
 .brand svg { width: 44px; height: 44px; display: block; }
+.brand__icon { width: 44px; height: 44px; display: block; object-fit: contain; }
 
 .brand__word {
   font-family: var(--display);
@@ -516,6 +517,7 @@ main { position: relative; }
   main { padding-top: 60px; padding-bottom: 60px; }
   .site-header__inner { padding: 14px var(--gutter); }
   .brand svg { width: 36px; height: 36px; }
+   .brand__icon { width: 36px; height: 36px; }
   .brand__word { font-size: 18px; }
   .nav-toggle { display: inline-flex; }
   .nav {
