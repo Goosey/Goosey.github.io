@@ -34,14 +34,14 @@
   <main>
     <article class="container post">
       <div class="post__meta label">
-        <span>OCT 2023</span>
+        <span>MAY 2026</span>
         <span>·</span>
         <span>4 min read</span>
       </div>
 
       <h2 class="post__title">Learning Python: A UX Designer Perspective</h2>
 
-      <h3>Why</h3>
+      <h3>Why?</h3>
       <p>
         The desire to learn Python stemmed from several motivators. As an interaction design graduate, I'm used to understanding the why behind UX decisions, but I have little understanding of how difficult it can be for developers to implement or change what might seem like a minor tweak to me. I wanted to experience that gap firsthand. And with a Raspberry Pi Zero 2 W and a Pimoroni e-ink display sitting in a drawer doing nothing, I was curious whether it's actually possible to learn a programming language using Claude AI as a guide rather than following a traditional course.
       </p>
@@ -53,13 +53,18 @@
              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1520 950%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%23FFBDBD%22/><stop offset=%221%22 stop-color=%22%23F4D06F%22/></linearGradient></defs><rect width=%221520%22 height=%22950%22 fill=%22url(%23g)%22/><text x=%22760%22 y=%22485%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2236%22 fill=%22%23343854%22>1520 × 950</text></svg>'" />
       </figure>
 
-      <h3>Market Research</h3>
+      <h3>Tools & Programs</h3>
+
+      <h3>Getting Started</h3>
       <p>
-        Considering the brief was pretty open-ended, I carried out market research to find an area directly affecting the target audience. As a young person myself, I had my own experiences to draw from, but I also searched the UK Personal Finance subreddit on reddit to search for any blindspots I may have had from my experience. I searched for studies and surveys, and among them one in particular that was recent and focussed on Gen Z. It found that, although the financial literacy of the majority of young people is poor, they show a willingness to learn and want to improve their financial health [1]. The study also worryingly noted that “...half of teens (48%) are learning about investing from social media despite [them also] ranking it as one of the least trustworthy sources for investing advice”. 
+        Before I even had a chance to try out a line of code, it became apparent this was going to be a task of much frustration, and that I needed to get comfortable seeing error codes. A lot of them.
       </p>
 
       <p>
-It’s clear that there’s a gap in the market for tools to help with financial literacy for Gen Z. In order to combat this issue, my app will act as a hub: for keeping track of your score, managing credit cards, alert users when they have a new card, and a generative AI text chatbot to ask their questions to. </p>
+Attempting to SSH into the device was the first hurdle, and honestly, that alone was almost enough to make me give up. What should have been a simple case of entering the username and password I created while setting up the Raspberry Pi Imager turned into hours of this:</p>
+      *image*
+
+      <p>But through much trial and error, I finally gained access to the device and could start displaying some basic elements on the screen. I began with the simplest things I could think of - rendering text and loading an image onto the e-ink display. Nothing fancy, just proof that I could actually make the hardware do something.</p>
 
       <h3>Branding Process</h3>
 
@@ -73,9 +78,13 @@ It’s clear that there’s a gap in the market for tools to help with financial
         <figcaption>Boon brand values</figcaption>
       </figure>
 
-      <p>The next stage was coming up with a brand name. This involved a lot of iteration as I wanted it to encompass the theme and goal of the product, and also to fit in with the core values I had decided on. I began mind-mapping and listing names of current banking apps to try and gather some inspiration. I also noted synonyms of my brand values in hopes that I could find a name that sets the tone of the brand. </p>
+      <p>Even at this stage, small wins felt significant. Getting a sentence to appear on a physical screen using code I'd written (with plenty of help from Claude) made the whole process feel tangible in a way that tutorials on a laptop screen never quite do.</p>
 
-      <p>I narrowed down a selection of possibilities and presented them to a group of people within the target age range and got them to rank the names from first to third. However, despite there being a favourite, the verbal feedback I got was that nobody found it particularly good and I wasn’t satisfied with it for representing the brand. After revisiting the mind-mapping process I then settled on the name Boon, a synonym of benefit which is ultimately what the app aims to do for young people. </p>
+      <h3>Building a Dashboard</h3>
+
+      <p>By this point I knew the knowledge needed to design something and the knowledge needed to build it are worlds apart. But I also started noticing some comforting similarities. In Figma, I create components and styles for consistency and ease of editing, and coding has its own version of that same thinking. For instance, defining colour values as variables at the top of a script felt a lot like setting up a colour style in Figma, or writing a reusable function to format text reminded me of building a component I could drop in anywhere. To try and understand more complex functions, I decided to create a weather dashboard. While my instincts as a UX designer is to always sketch and wireframe a project to iron out usability and structural problems, I chose to jump straight into building the dashboard - mainly because I didn’t want to get hung up on making it look a certain way opposed to figuring out what I’m doing and why.</p>
+
+      <p>My first iteration was just a basic black and white static dashboard with hardcoded placeholder data, which already introduced me to a lot of new concepts. I was starting to understand how layout works at its most fundamental level, figuring out a grid system based on the display's pixel dimensions rather than dragging guides around in Figma. I also began to see how Python's def function is essentially a way of creating reusable elements - not unlike building a component that you can drop in wherever you need it.</p>
 
       <!-- BANNER IMAGE (full content width, 760px) -->
       <figure class="post-image post-image--banner">
@@ -84,11 +93,9 @@ It’s clear that there’s a gap in the market for tools to help with financial
              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1520 760%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%23C1D37F%22/><stop offset=%221%22 stop-color=%22%23D3FAD6%22/></linearGradient></defs><rect width=%221520%22 height=%22760%22 fill=%22url(%23g)%22/><text x=%22760%22 y=%22390%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2236%22 fill=%22%23343854%22>1520 × 760</text></svg>'" />
         <figcaption>Boon brand name ideation</figcaption>
       </figure>
-
-      <h3>Visual Elements</h3>
       
       <p>
-       Typography, colour choices, wordmark and monogram were my next focuses. Of particular focus was the wordmark and monogram, as that would act as the main touchpoint potential customers would come across for the brand. Colour was an important consideration for the brand as it would be used across all interfaces and touchpoints to provide a certain feeling, with lilac intended to be inspiring and turquoise for calmness. In keeping with the core values of clarity and accessibility, I wanted something that contrasted well but wasn’t difficult to look at.
+       Now that I was beginning to understand some basic visual setup, it was time to develop the dashboard further and make it functional by pulling live weather data using the Open-Meteo API. I also wanted to add a colour output to correspond with the data, so you could tell at a glance which values were high or low. This was a big eye opener for me, as a designer, making visual changes like these is often just a case of adding an instance to a component, or adding variables in the prototyping stage. But in this instance, making the dashboard functional was enough to bulk the script from 86 lines of code to 228.
       </p>
 
       <!-- BANNER IMAGE (full content width, 760px) -->
@@ -100,7 +107,7 @@ It’s clear that there’s a gap in the market for tools to help with financial
       </figure>
       
       <p>
-        At a later stage in the project, we were to critique each of the other students’ work. I compiled a style tile with my visual elements, strapline, brand values and touchpoints. I found this to be a beneficial task as it allowed me to get real feedback on what was strong and what needed further consideration. This allowed me to choose what to prioritise as we entered the ending stages of the process.
+        I was starting to notice how choice of hardware can impact design as well. Due to the nature of e-ink displays having minimal colour capabilities, adjusting colour contrast isn’t as easy as increasing transparency or simply making a colour lighter. To make the text legible against the card backgrounds, I had to get creative and use dithering - a technique that simulates lighter tones by scattering tiny dots of black and white. It's a solution I wouldn't have considered as a designer, but one that made complete sense once I understood the technical limitation I was working within.
       </p>
 
       <!-- BANNER IMAGE (full content width, 760px) -->
@@ -111,32 +118,19 @@ It’s clear that there’s a gap in the market for tools to help with financial
         <figcaption>Boon style tile</figcaption>
       </figure>
 
-      <p>
-       To streamline the design process when creating my high fidelity mockups, I created a comprehensive component set in Figma, as well as setting local styles for colour and typography. Having this groundwork done meant I could ensure consistency throughout the designs.
-      </p>
 
-      <!-- SINGLE IMAGE (content-width) -->
-      <figure class="post-image">
-        <img src="../images/boon-6.png"
-             alt="Screenshot of Figma component library"
-             onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1520 950%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%23FFBDBD%22/><stop offset=%221%22 stop-color=%22%23F4D06F%22/></linearGradient></defs><rect width=%221520%22 height=%22950%22 fill=%22url(%23g)%22/><text x=%22760%22 y=%22485%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2236%22 fill=%22%23343854%22>1520 × 950</text></svg>'" />
-        <figcaption>Figma component library for Boon</figcaption>
-      </figure>
-
-      <h3>Final Thoughts</h3>
+      <h3>Conclusion</h3>
       <p>
-        This project gave me a lot of learning opportunities and it allowed me to better understand the intricacies within branding and what all it encompasses. This was also my first experience creating a component set in Figma, as I had previously just created elements and duplicated them throughout my designs, I can now see how it can benefit the design process and interactivity within it. Upon reflecting on the final app designs, I do feel there was room for improvement, despite having tints and shades of my primary colours in the local styles, I feel I used them inconsistently. I also used grey for some buttons and cards which makes some elements look unfinished as the others had a consistent use of the turquoise and lilac brand colours. The features within the app did appropriately demonstrate the purpose of helping young people attain more knowledge around the topic of credit scores though the use of the chat bot and credit card management section.
+       My biggest challenge throughout this was probably terminology. While a lot of the principles shared similarities to UX design - formatting elements based off a grid system and setting a type scale - the wording and methods used to do so were far from intuitive for me. 
       </p>
+      <p>So, is Claude AI capable of teaching a coding language? Based on this project alone, it's hard to give a definitive answer. I wouldn't be able to independently write a script from scratch, and there are still gaps in my understanding of why certain things are done the way they are. But I don't think that's a failure of the tool, it's more a reflection of how early I am in the process. Learning any skill takes consistent practice, and this was really just the starting point.</p>
+      <p>Witnessing first hand what design restraints can be determined based off hardware will definitely shape how I think about problems in the future. The use of dithering isn’t something I would have thought of utilising previously, but despite it being one of the only options available, I feel it actually creates more visual depth. </p>
 
       <!-- POST NAVIGATION -->
       <nav class="post-nav" aria-label="Post navigation">
-        <a class="prev" href="rhythmate.html">
-          <span class="label">← Previous</span>
-          <span class="title">Rhythmate</span>
-        </a>
-        <a class="next" href="hipparu.html">
+        <a class="next" href="echo.html">
           <span class="label">See next →</span>
-          <span class="title">Hipparu</span>
+          <span class="title">Echo</span>
         </a>
       </nav>
     </article>
